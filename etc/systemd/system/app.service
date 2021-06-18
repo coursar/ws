@@ -1,0 +1,13 @@
+[Unit]
+Description=app
+After=syslog.target
+
+[Service]
+User=app
+WorkingDirectory=/opt/app
+ExecStart=/usr/bin/node index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
